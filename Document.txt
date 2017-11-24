@@ -1,0 +1,32 @@
+Application Name : DirectPay
+
+Why to use DirectPay
+
+Users need to link their bank account to the DirectPay app and make hassle-free, secure payments directly from your bank account 24/7. 
+
+Users using DirectPay can transfer money using contact numbers.
+
+Once users enter their card details, details will saved in secure payment gateway and will be used for fast payment modes.
+
+Use the DirectPay wallet only to receive instant refunds and cashbacks on using services of this application.
+
+
+Steps:
+
+1) New Users
+
+	New users have to enter phone number, password and OTP on their mobile to get register.
+	Once they are done with successful signup, they will direct to login page.
+
+2) Existing Users :
+	
+	Users can simply enter mobile number and password to access their account.
+	On 3rd unsuccessful attempt to login, they will be blocked for next 24 hrs.
+
+3) Transfer Money :
+	
+	Users need to enter amount, DirectPay will check for available balance and work depending on available balance.
+	If balance is insufficient, Users will be asked to add money.
+	If users have sufficient balance then they can send money via contact number if receiver also using this app else have to enter whole account details manually.
+	Request will be directly to payment gateway where gateway server fetches the account details and process their money transfer request.
+	Users may have multiple transactions.
