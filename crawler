@@ -1,0 +1,25 @@
+<?php
+	$url = $argv[1];
+	$depth = $argv[2];
+	include('simple_html_dom.php'); 
+	// echo $html;
+  	function crawler($url ,$depth){
+  		$links = array();
+		$titles = array();
+		$html = file_get_html($url);
+	    if( $depth == 0 )
+	    	return;
+	  	if($depth > 0) {
+		  	foreach ( $html -> find('title') as $element ) {
+		  		$titles[] = $element->plaintext;
+		  	}
+		  	foreach ( $html -> find('a') as $element ) {
+		  		$links[] = array('title' => $titles, 'Link' => $element->href, 'sublinks' =>get_links($element->href,$depth-1));
+		  	}
+	  		return $links;
+  	 	}
+  	}
+    $result = crawler($url, $depth);
+    // print_r($result);
+    print_r(json_encode($result));
+?>
